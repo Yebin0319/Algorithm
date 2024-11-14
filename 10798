@@ -1,0 +1,11 @@
+letters=[]
+
+for i in range(5):
+    letter = input()
+    letters.append(letter)
+    
+for q in range(15):
+    for p in range(5):
+        if q < len(letters[p]):
+            print(letters[p][q], end="")
+        
