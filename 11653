@@ -1,0 +1,23 @@
+import math
+
+def find_factors(num):
+    factors = []
+    
+    while num%2 == 0:
+        factors.append(2)
+        num //= 2
+    for div in range(3, int(math.sqrt(num))+1, 2):
+        while num%div == 0:
+            factors.append(div)
+            num //= div
+    
+    
+        
+    if num>1:
+        factors.append(num)
+        
+    for factor in factors:
+        print(factor)
+    
+n = int(input())
+find_factors(n)
