@@ -1,0 +1,20 @@
+length = [1, 1, 1, 2, 2]
+test = int(input())
+test_num = []
+
+
+
+for _ in range(test):
+    test_n = int(input())
+    test_num.append(test_n)
+
+    
+biggest_test_num = max(test_num)
+
+for i in range(5, biggest_test_num+1):
+    n = length[i-1] + length[i-5]
+    length.append(n)
+
+for num in test_num:
+   
+    print(length[num-1])
